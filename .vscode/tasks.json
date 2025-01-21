@@ -37,6 +37,12 @@
           }
         }
       }
+    },
+    {
+      "label": "Publish to GitHub Pages",
+      "type": "shell",
+      "command": "npm run publish-gh-pages",
+      "problemMatcher": []
     }
   ]
 }

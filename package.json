@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "build-gh-pages": "ng build --output-path=ghpages --base-href=/tptrackers/",
+    "publish-gh-pages": "npm run build-gh-pages && npx angular-cli-ghpages --dir=ghpages/browser"
   },
   "private": true,
   "dependencies": {
