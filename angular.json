@@ -8,12 +8,12 @@
       "schematics": {},
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "tpt",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "/ghpages",
+            "outputPath": "/dist/tptrackers",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
