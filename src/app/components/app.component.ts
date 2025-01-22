@@ -6,7 +6,7 @@ import { SiteHeaderComponent } from "./site-header/site-header.component";
   selector: 'app-root',
   imports: [RouterOutlet, SiteHeaderComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'tptrackers';
