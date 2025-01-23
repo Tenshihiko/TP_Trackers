@@ -2,14 +2,15 @@
 .site-header {
     background-color: #4d3d31;
     color: white;
-    padding: 10px;
+    padding: 0px 10px;
 
     .container {
         max-width: 800px; // Ограничиваем содержимое хедера
+        min-height: 80px;
         margin: 0 auto; // Центрируем содержимое
         display: flex;
         align-items: center;
-        padding: 10px;
+        padding: 0px 10px;
     }
 
     .logo img {
@@ -17,46 +18,62 @@
         margin-right: 20px;
     }
 
-    .nav-links a {
-        text-decoration: none;
-        color: white;
-        font-size: 18px;
-        margin-right: 15px;
-        padding: 5px 10px;
+    .nav-links {
+        display: flex;
+        align-items: center;
+        height: 80px;
+        a {
+            align-items: center;
+            text-align: center;
+            height: 100%;
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            margin-right: 15px;
+            padding: 0px 10px;
 
-        &.active {
-            background-color: #5f4429;
-            border-radius: 4px;
+            &.active {
+                background-color: #5f4429;
+                border-radius: 4px;
+            }
         }
     }
 
-    .profile-menu {
+    .profile-menu-wrapper {
         margin-left: auto;
         position: relative;
+        display: flex;
+        align-items: center;
+        height: 80px;
+        cursor: pointer;
 
-        .profile-icon {
-            height: 40px;
-            cursor: pointer;
-        }
+        /* Контейнер для иконки и меню */
+        .profile-menu {
+            position: relative;
 
-        .dropdown-menu {
-            position: absolute;
-            top: 50px;
-            right: 0;
-            background-color: white;
-            color: black;
-            border: 1px solid #ccc;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            width: 150px;
+            .profile-icon {
+                height: 40px;
+            }
 
-            li {
-                padding: 10px;
-                cursor: pointer;
+            .dropdown-menu {
+                position: absolute;
+                top: 50px;
+                right: 0;
+                background-color: white;
+                color: black;
+                border: 1px solid #ccc;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                width: 150px;
 
-                &:hover {
-                    background-color: #f0f0f0;
+                li {
+                    padding: 10px;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #f0f0f0;
+                    }
                 }
             }
         }

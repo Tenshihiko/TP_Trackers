@@ -7,14 +7,15 @@
         <nav class="nav-links">
             <a routerLink="/books" routerLinkActive="active">Книги</a>
         </nav>
-        <div 
-            class="profile-menu">
-            <img src="assets/user-icon.png" alt="User Profile" class="profile-icon" (click)="toggleMenu()">
-            <ul *ngIf="menuOpen" class="dropdown-menu">
-                <li (click)="importData()">Импорт данных</li>
-                <li (click)="exportData()">Экспорт данных</li>
-                <li (click)="clearData()">Стереть данные</li>
-            </ul>
+        <div class="profile-menu-wrapper" (mouseenter)="openMenu()" (mouseleave)="closeMenu()">
+            <div class="profile-menu">
+                <img src="assets/user-icon.png" alt="User Profile" class="profile-icon" (click)="toggleMenu()">
+                <ul *ngIf="menuOpen" class="dropdown-menu">
+                    <li (click)="importData()">Импорт данных</li>
+                    <li (click)="exportData()">Экспорт данных</li>
+                    <li (click)="clearData()">Стереть данные</li>
+                </ul>
+            </div>
         </div>
     </div>
 </header>

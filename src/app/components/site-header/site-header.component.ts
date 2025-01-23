@@ -15,6 +15,14 @@ export class SiteHeaderComponent {
     this.menuOpen = !this.menuOpen;
   }
 
+  openMenu() {
+    this.menuOpen = true; // Открыть меню при наведении
+  }
+
+  closeMenu() {
+    this.menuOpen = false; // Закрыть меню, когда курсор уходит
+  }
+
   importData() {
     console.log('Импорт данных');
     // Добавьте вашу логику здесь
