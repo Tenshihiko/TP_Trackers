@@ -1,1 +1,20 @@
-<p>site-header works!</p>
+<!-- site-header.component.html -->
+<header class="site-header">
+    <div class="container">
+        <div class="logo">
+            <a routerLink="/"><img src="assets/site-logo.png" alt="Site Logo"></a>
+        </div>
+        <nav class="nav-links">
+            <a routerLink="/books" routerLinkActive="active">Книги</a>
+        </nav>
+        <div 
+            class="profile-menu">
+            <img src="assets/user-icon.png" alt="User Profile" class="profile-icon" (click)="toggleMenu()">
+            <ul *ngIf="menuOpen" class="dropdown-menu">
+                <li (click)="importData()">Импорт данных</li>
+                <li (click)="exportData()">Экспорт данных</li>
+                <li (click)="clearData()">Стереть данные</li>
+            </ul>
+        </div>
+    </div>
+</header>
