@@ -1,7 +1,8 @@
-enum sceneTag{
+enum sceneTagEnum{
+    None = '',
     AfternoonTea       = "st_at",
-    AustoundingEpisode = "st_ae",
-    CourtDanse         = "st_cd",
+    AstoundingEpisode = "st_ae",
+    CourtDance         = "st_cd",
     ForeignScenery     = "st_fs",
     GildedAge          = "st_ga",
     MagicalAdventure   = "st_ma",
@@ -13,7 +14,8 @@ enum sceneTag{
     WondrousJourney    = "st_wj",
 }
 
-enum giftTag{
+enum giftTagEnum{
+    None = '',
     Mysterious  = "gt_m",
     Cultural    = "gt_c",
     Art         = "gt_a",
@@ -24,7 +26,8 @@ enum giftTag{
     Decor       = "gt_d",
 }
 
-enum clothesTag{
+enum clothesTagEnum{
+    None = '',
     Casual      = "ct_ca",
     Charming    = "ct_ch",
     Cooling     = "ct_co",
@@ -38,4 +41,17 @@ enum clothesTag{
     Sensible    = "ct_se",
     Simple      = "ct_si",
     Sweet       = "ct_sw",
+    Warm        = "ct_wa",
+}
+
+enum bookType{
+    None,
+    Story,
+    SideStory,
+    TravelersNote
+}
+
+enum giftIngredientsEnum{
+    None = '',
+    
 }
