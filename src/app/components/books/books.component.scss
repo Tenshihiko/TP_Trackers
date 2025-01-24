@@ -1,0 +1,30 @@
+.books-panel {
+    .filter-panel {
+      margin-bottom: 20px;
+    }
+  
+    .stories-grid, .notes-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 10px;
+      min-height: 150px;
+    }
+  
+    .story-card, .note-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 150px;
+  
+      img {
+        width: 100%;
+        height: auto;
+      }
+  
+      .info-panel {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px;
+      }
+    }
+  }

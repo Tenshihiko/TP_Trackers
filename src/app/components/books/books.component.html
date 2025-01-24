@@ -1,1 +1,24 @@
-<p>books works!</p>
+<div class="books-panel">
+    <div class="filter-panel">
+      <label for="sceneTagFilter">Scene tag:</label>
+      <select id="sceneTagFilter" [(ngModel)]="sceneFilter" (change)="onFilterChange(sceneFilter)">
+        <option *ngFor="let scene of sceneTags" [value]="scene.id">{{scene.title_en}}</option>
+      </select>
+    </div>
+  
+    <h2>Stories</h2>
+    <div class="stories-grid">
+      <div class="story-card" *ngFor="let story of stories">
+        <img src="assets/bookcovers/{{story.filename}}" alt="Cover image">
+        
+      </div>
+    </div>
+  
+    <h2>Traveler's Notes</h2>
+    <div class="notes-grid">
+      <div class="note-card" *ngFor="let note of travelersNotes">
+        <img src="assets/bookcovers/{{note.filename}}" alt="Cover image">
+        
+      </div>
+    </div>
+  </div>
