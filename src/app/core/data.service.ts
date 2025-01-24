@@ -4,6 +4,7 @@ import { Companions } from "./data/companions.data";
 import { Relics } from "./data/relics.data";
 import { Companion, Relic, SideStory, Story, TravelersNote } from "./models";
 import { Observable, of } from "rxjs";
+import { clothesTagEnum, giftTagEnum, sceneTagEnum } from "./enums";
 
 @Injectable({
     providedIn: 'root',
@@ -21,8 +22,10 @@ export class DataService{
         return of(Books.SideStories.filter(sidestory => sidestory.parentbook.id === storyId));
     }
 
-    getTravelersNotes(): Observable<TravelersNote[]>{
-        return of(Books.TravellersNotes);
+    getTravelersNotes(scene: sceneTagEnum | null): Observable<TravelersNote[]>{
+        if(!scene)
+            return of(Books.TravellersNotes);
+        return of(Books.TravellersNotes.filter(story => story.scenetag === scene));
     }
 
     getRelics(stars: number | null, scene: sceneTagEnum | null, clothetags: clothesTagEnum[] | null): Observable<Relic[]>{

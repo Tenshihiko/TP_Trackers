@@ -1,3 +1,4 @@
+import { clothesTagEnum, sceneTagEnum } from "../enums";
 import { Companion, Relic, SceneTag } from "../models";
 import { Companions } from "./companions.data";
 

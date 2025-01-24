@@ -1,3 +1,4 @@
+import { giftTagEnum } from "../enums";
 import { Companion } from "../models";
 import { Books } from "./books.data";
 

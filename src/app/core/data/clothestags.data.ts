@@ -1,3 +1,5 @@
+import { clothesTagEnum } from "../enums";
+
 export class clothesTags{
     public static readonly pinks: clothesTags[] = [
         clothesTagEnum.Grand,

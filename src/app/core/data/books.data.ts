@@ -1,3 +1,4 @@
+import { bookType, sceneTagEnum } from "../enums";
 import { SideStory, Story, TravelersNote } from "../models";
 
 export class Books {

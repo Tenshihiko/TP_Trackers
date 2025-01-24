@@ -1,3 +1,4 @@
+import { sceneTagEnum } from "../enums";
 import { SceneTag } from "../models";
 
 export class SceneTags{

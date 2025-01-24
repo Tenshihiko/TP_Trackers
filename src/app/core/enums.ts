@@ -1,4 +1,4 @@
-enum sceneTagEnum{
+export enum sceneTagEnum{
     None = '',
     AfternoonTea       = "st_at",
     AstoundingEpisode = "st_ae",
@@ -14,7 +14,7 @@ enum sceneTagEnum{
     WondrousJourney    = "st_wj",
 }
 
-enum giftTagEnum{
+export enum giftTagEnum{
     None = '',
     Mysterious  = "gt_m",
     Cultural    = "gt_c",
@@ -26,7 +26,7 @@ enum giftTagEnum{
     Decor       = "gt_d",
 }
 
-enum clothesTagEnum{
+export enum clothesTagEnum{
     None = '',
     Casual      = "ct_ca",
     Charming    = "ct_ch",
@@ -44,14 +44,14 @@ enum clothesTagEnum{
     Warm        = "ct_wa",
 }
 
-enum bookType{
+export enum bookType{
     None,
     Story,
     SideStory,
     TravelersNote
 }
 
-enum giftIngredientsEnum{
+export enum giftIngredientsEnum{
     None = '',
     
 }

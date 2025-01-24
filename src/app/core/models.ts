@@ -1,3 +1,5 @@
+import { bookType, clothesTagEnum, giftTagEnum, sceneTagEnum } from "./enums";
+
 interface IVisual{
   filename: string;
 }
