@@ -1,7 +1,7 @@
 export enum sceneTagEnum{
-    None = '',
+    None               = "",
     AfternoonTea       = "st_at",
-    AstoundingEpisode = "st_ae",
+    AstoundingEpisode  = "st_ae",
     CourtDance         = "st_cd",
     ForeignScenery     = "st_fs",
     GildedAge          = "st_ga",

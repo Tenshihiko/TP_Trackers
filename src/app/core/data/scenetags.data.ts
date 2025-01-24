@@ -74,8 +74,15 @@ export class SceneTags{
         title_ru: 'Призрачный свет',
         filename: 'Scene_Stamp_Phantom_Light.png'
     };
+    public static readonly None: SceneTag = {
+        id: sceneTagEnum.None,
+        title_en: 'None',
+        title_ru: 'Отсутсвует',
+        filename: ''
+    };
 
-    public static readonly All: SceneTag[] = [
+    public static readonly All: SceneTag[] = [       
+        SceneTags.None, 
         SceneTags.CourtDance,
         SceneTags.AfternoonTea,
         SceneTags.AstoundingEpisode,

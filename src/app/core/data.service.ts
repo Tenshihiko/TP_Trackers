@@ -15,7 +15,7 @@ export class DataService{
         if(!scene)
             return of(Books.Stories);
 
-        return of(Books.Stories.filter(story => story.scenetag === scene));
+        return of(Books.Stories.filter(story => scene === (sceneTagEnum.None as sceneTagEnum) || story.scenetag === scene));
     }
 
     getSideStoriesByStory(storyId: string): Observable<SideStory[]>{
@@ -25,13 +25,13 @@ export class DataService{
     getTravelersNotes(scene: sceneTagEnum | null): Observable<TravelersNote[]>{
         if(!scene)
             return of(Books.TravellersNotes);
-        return of(Books.TravellersNotes.filter(story => story.scenetag === scene));
+        return of(Books.TravellersNotes.filter(story => scene === (sceneTagEnum.None as sceneTagEnum) || story.scenetag === scene));
     }
 
     getRelics(stars: number | null, scene: sceneTagEnum | null, clothetags: clothesTagEnum[] | null): Observable<Relic[]>{
         return of(Relics.All.filter(relic =>
-            (!stars || relic.stars === stars)
-            && (!scene || relic.scenetag === scene)
+            (!stars || stars == 0 || relic.stars === stars)
+            && (!scene || scene === (sceneTagEnum.None as sceneTagEnum) || relic.scenetag === scene)
             && (!clothetags || clothetags.length == 0
                 || ((clothetags.length < 1 || relic.clothesTags.find(ct => ct === clothetags[0]))
                 && (clothetags.length < 2 || relic.clothesTags.find(ct => ct === clothetags[1]))))
