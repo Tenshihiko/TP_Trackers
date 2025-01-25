@@ -9,16 +9,22 @@
     <h2>Stories</h2>
     <div class="stories-grid">
       <div class="story-card" *ngFor="let story of stories">
-        <img src="assets/bookcovers/{{story.filename}}" alt="Cover image">
+        <img src="assets/bookcovers/{{story.filename}}" alt="Cover of {{story.title_en}}">
         
       </div>
     </div>
   
     <h2>Traveler's Notes</h2>
     <div class="notes-grid">
-      <div class="note-card" *ngFor="let note of travelersNotes">
-        <img src="assets/bookcovers/{{note.filename}}" alt="Cover image">
-        
+      <div class="story-card" *ngFor="let story of travelersNotes">
+        <img src="assets/bookcovers/{{story.filename}}" alt="Cover of {{story.title_en}}">        
+      </div>
+    </div>
+
+    <h2>Side stories</h2>
+    <div class="sidestories-grid">
+      <div class="story-card" *ngFor="let story of sidestories">
+        <img src="assets/bookcovers/{{story.filename}}" alt="Cover of {{story.title_en}}">        
       </div>
     </div>
   </div>
