@@ -1,5 +1,5 @@
-import { sceneTagEnum } from "../enums";
-import { SceneTag } from "../models";
+import { sceneTagEnum } from "../models/enums";
+import { SceneTag } from "../models/models";
 
 export class SceneTags{
     public static readonly CourtDance: SceneTag = {

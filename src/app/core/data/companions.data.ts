@@ -1,5 +1,5 @@
-import { giftTagEnum } from "../enums";
-import { Companion } from "../models";
+import { giftTagEnum } from "../models/enums";
+import { Companion } from "../models/models";
 import { Books } from "./books.data";
 
 export class Companions {

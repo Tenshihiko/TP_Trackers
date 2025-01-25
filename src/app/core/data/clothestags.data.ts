@@ -1,4 +1,4 @@
-import { clothesTagEnum } from "../enums";
+import { clothesTagEnum } from "../models/enums";
 
 export class clothesTags{
     public static readonly pinks: clothesTags[] = [

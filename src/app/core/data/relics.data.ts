@@ -1,5 +1,5 @@
-import { clothesTagEnum, sceneTagEnum } from "../enums";
-import { Companion, Relic, SceneTag } from "../models";
+import { clothesTagEnum, sceneTagEnum } from "../models/enums";
+import { Companion, Relic, SceneTag } from "../models/models";
 import { Companions } from "./companions.data";
 
 export class Relics {

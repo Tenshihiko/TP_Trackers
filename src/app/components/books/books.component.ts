@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { SceneTag, Story, TravelersNote } from '../../core/models';
-import { DataService } from '../../core/data.service';
+import { SceneTag, Story, TravelersNote } from '../../core/models/models';
+import { DataService } from '../../core/services/data.service';
 import { SceneTags } from '../../core/data/scenetags.data'
-import { sceneTagEnum } from '../../core/enums';
+import { sceneTagEnum } from '../../core/models/enums';
 import { CommonModule } from '@angular/common';
 
 @Component({

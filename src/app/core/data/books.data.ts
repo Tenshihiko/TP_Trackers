@@ -1,5 +1,5 @@
-import { bookType, sceneTagEnum } from "../enums";
-import { SideStory, Story, TravelersNote } from "../models";
+import { bookType, sceneTagEnum } from "../models/enums";
+import { SideStory, Story, TravelersNote } from "../models/models";
 
 export class Books {
 
@@ -16,7 +16,7 @@ export class Books {
         id: "b_votw",
         bookType: bookType.TravelersNote,
         title_en: 'Vengeance of the Witch',
-        title_ru: 'Демен внутри меня',
+        title_ru: 'Демон внутри меня',
         scenetag: sceneTagEnum.OrientalFantasy,
         filename: 'Book_Vengeance_of_the_Witch.png'
     };

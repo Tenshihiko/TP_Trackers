@@ -1,10 +1,10 @@
 import { Injectable } from "@angular/core";
-import { Books } from "./data/books.data";
-import { Companions } from "./data/companions.data";
-import { Relics } from "./data/relics.data";
-import { Companion, Relic, SideStory, Story, TravelersNote } from "./models";
+import { Books } from "../data/books.data";
+import { Companions } from "../data/companions.data";
+import { Relics } from "../data/relics.data";
+import { Companion, Relic, SideStory, Story, TravelersNote } from "../models/models";
 import { Observable, of } from "rxjs";
-import { clothesTagEnum, giftTagEnum, sceneTagEnum } from "./enums";
+import { clothesTagEnum, giftTagEnum, sceneTagEnum } from "../models/enums";
 
 @Injectable({
     providedIn: 'root',
