@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { LocalStorageService } from '../../core/services/local-storage.service';
+import { saveAs } from 'file-saver';
 
 @Component({
   selector: 'tpt-site-header',
@@ -10,6 +12,60 @@ import { RouterModule } from '@angular/router';
 })
 export class SiteHeaderComponent {
   menuOpen = false;
+
+  constructor(private localStorageService: LocalStorageService) {}
+
+  ngOnInit(){
+    if(!this.localStorageService.hasKey('tpt-testdata')){
+      this.localStorageService.setItem('tpt-testdata', {test:"test"});
+    }
+  }
+
+  // Метод для экспорта данных
+  exportData() {
+    console.log('Экспорт данных');
+    this.localStorageService.exportAll().subscribe({
+      next: (jsonData) => {
+        const blob = new Blob([jsonData], { type: 'application/json' });
+        saveAs(blob, 'localStorageData.json');  // Скачиваем файл
+      },
+      error: (err) => console.error('Ошибка при экспорте данных', err),
+    });
+    this.toggleMenu();
+  }
+
+  // Метод для импорта данных
+  importData() {
+    console.log('Импорт данных');
+    const fileInput = document.createElement('input');
+    fileInput.type = 'file';
+    fileInput.accept = '.json';
+    fileInput.click();
+
+    fileInput.onchange = (event: Event) => {
+      const input = event.target as HTMLInputElement;
+      if (input?.files?.[0]) {
+        const file = input.files[0];
+        const reader = new FileReader();
+        reader.onload = () => {
+          const json = reader.result as string;
+          this.localStorageService.importAll(json).subscribe({
+            next: () => console.log('Данные успешно импортированы'),
+            error: (err) => console.error('Ошибка при импорте данных', err),
+          });
+        };
+        reader.readAsText(file);
+      }
+    };
+    this.toggleMenu();
+  }
+
+  // Метод для очистки данных
+  clearData() {
+    console.log('Стереть данные');
+    this.localStorageService.clear();
+    this.toggleMenu();
+  }
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
@@ -21,23 +77,5 @@ export class SiteHeaderComponent {
 
   closeMenu() {
     this.menuOpen = false; // Закрыть меню, когда курсор уходит
-  }
-
-  importData() {
-    console.log('Импорт данных');
-    // Добавьте вашу логику здесь
-    this.toggleMenu();
-  }
-
-  exportData() {
-    console.log('Экспорт данных');
-    // Добавьте вашу логику здесь
-    this.toggleMenu();
-  }
-
-  clearData() {
-    console.log('Стереть данные');
-    // Добавьте вашу логику здесь
-    this.toggleMenu();
   }
 }

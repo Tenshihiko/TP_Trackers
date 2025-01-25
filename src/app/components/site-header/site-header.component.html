@@ -5,15 +5,19 @@
             <a routerLink="/"><img src="assets/site-logo.png" alt="Site Logo"></a>
         </div>
         <nav class="nav-links">
-            <a routerLink="/books" routerLinkActive="active">Книги</a>
+            <a routerLink="/books" routerLinkActive="active">Books</a>
         </nav>
         <div class="profile-menu-wrapper" (mouseenter)="openMenu()" (mouseleave)="closeMenu()">
             <div class="profile-menu">
-                <img src="assets/user-icon.png" alt="User Profile" class="profile-icon" (click)="toggleMenu()">
+                <img src="assets/user-icon.svg" alt="User Profile" class="profile-icon" (click)="toggleMenu()">
                 <ul *ngIf="menuOpen" class="dropdown-menu">
-                    <li (click)="importData()">Импорт данных</li>
-                    <li (click)="exportData()">Экспорт данных</li>
-                    <li (click)="clearData()">Стереть данные</li>
+                    <li (click)="exportData()">
+                <img src="assets/export-icon.svg" alt="export data" class="menu-icon">
+                Export user data</li>
+                    <li (click)="importData()">
+                        <img src="assets/import-icon.svg" alt="export data" class="menu-icon">Import user data</li>
+                    <li (click)="clearData()">
+                        <img src="assets/clear-icon.svg" alt="export data" class="menu-icon">Clear user data</li>
                 </ul>
             </div>
         </div>
