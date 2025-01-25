@@ -17,7 +17,7 @@ export class Books {
         bookType: bookType.Story,
         title_en: "Magic Lamp",
         title_ru: "Волшебная лампа",
-        scenetag: sceneTagEnum.OrientalFantasy,
+        scenetag: sceneTagEnum.ForeignScenery,
         filename: "Book_Magic_Lamp.png",
     };
 
@@ -35,7 +35,7 @@ export class Books {
         bookType: bookType.Story,
         title_en: "Swan Lake",
         title_ru: "Лебединое озеро",
-        scenetag: sceneTagEnum.None,
+        scenetag: sceneTagEnum.WondrousJourney,
         filename: "Book_Swan_Lake.png",
     };
 
@@ -44,7 +44,7 @@ export class Books {
         bookType: bookType.Story,
         title_en: "Helen of Sparta",
         title_ru: "Елена Спартанская",
-        scenetag: sceneTagEnum.None,
+        scenetag: sceneTagEnum.MagicalAdventure,
         filename: "Book_Helen_of_Sparta.png",
     };
 
@@ -89,7 +89,7 @@ export class Books {
         bookType: bookType.Story,
         title_en: "Taishō Adventures",
         title_ru: "Приключения Тайсё",
-        scenetag: sceneTagEnum.None,
+        scenetag: sceneTagEnum.RomanticPoem,
         filename: "Book_Taisho_Adventures.png",
     };
 
@@ -98,7 +98,7 @@ export class Books {
         bookType: bookType.Story,
         title_en: "Saga of Viera",
         title_ru: "Сага о Виере",
-        scenetag: sceneTagEnum.None,
+        scenetag: sceneTagEnum.MagicalAdventure,
         filename: "Book_Saga_of_Viera.png",
     };
 
@@ -107,7 +107,7 @@ export class Books {
         bookType: bookType.Story,
         title_en: "Tang Dynasty Hunter",
         title_ru: "Охотник династии Тан",
-        scenetag: sceneTagEnum.None,
+        scenetag: sceneTagEnum.OrientalFantasy,
         filename: "Book_Tang_Dynasty_Hunter.png",
     };
 
@@ -116,7 +116,7 @@ export class Books {
         bookType: bookType.Story,
         title_en: "Si-woo's Sight",
         title_ru: "Видение Сиу",
-        scenetag: sceneTagEnum.None,
+        scenetag: sceneTagEnum.StyledAllOver,
         filename: "Book_Siwoo_Sight.png",
     };
 
@@ -134,7 +134,7 @@ export class Books {
         bookType: bookType.Story,
         title_en: "White Snake",
         title_ru: "Белая змея",
-        scenetag: sceneTagEnum.None,
+        scenetag: sceneTagEnum.OrientalFantasy,
         filename: "Book_White_Snake.png",
     };
 
@@ -143,7 +143,7 @@ export class Books {
         bookType: bookType.Story,
         title_en: "Dancing On Ice",
         title_ru: "Танцы на льду",
-        scenetag: sceneTagEnum.None,
+        scenetag: sceneTagEnum.StyledAllOver,
         filename: "Book_Dancing_on_Ice.png",
     };
 
@@ -152,7 +152,7 @@ export class Books {
         bookType: bookType.Story,
         title_en: "Have You Seen Claudia?",
         title_ru: "Вы видели Клаудию?",
-        scenetag: sceneTagEnum.None,
+        scenetag: sceneTagEnum.AstoundingEpisode,
         filename: "Book_Have_You_Seen_Claudia.png",
     };
 
@@ -161,7 +161,7 @@ export class Books {
         bookType: bookType.Story,
         title_en: "Whispers of the Rain",
         title_ru: "Шёпот дождя",
-        scenetag: sceneTagEnum.None,
+        scenetag: sceneTagEnum.StyledAllOver,
         filename: "Book_Whispers_of_the_Rain.png",
     };
 
@@ -170,7 +170,7 @@ export class Books {
         bookType: bookType.Story,
         title_en: "Cleopatra",
         title_ru: "Клеопатра",
-        scenetag: sceneTagEnum.None,
+        scenetag: sceneTagEnum.ForeignScenery,
         filename: "Book_Cleopatra.png",
     };
 
@@ -179,7 +179,7 @@ export class Books {
         bookType: bookType.Story,
         title_en: "The Sacred Beast",
         title_ru: "Священный зверь",
-        scenetag: sceneTagEnum.None,
+        scenetag: sceneTagEnum.ForeignScenery,
         filename: "Book_The_Sacred_Beast.png",
     };
 
@@ -188,7 +188,7 @@ export class Books {
         bookType: bookType.Story,
         title_en: "Ancient Dreams",
         title_ru: "Древние мечты",
-        scenetag: sceneTagEnum.None,
+        scenetag: sceneTagEnum.OrientalFantasy,
         filename: "Book_Ancient_Dreams.png",
     };
 
@@ -197,7 +197,7 @@ export class Books {
         bookType: bookType.Story,
         title_en: "Ghost Manor",
         title_ru: "Поместье призраков",
-        scenetag: sceneTagEnum.None,
+        scenetag: sceneTagEnum.StyledAllOver,
         filename: "Book_Ghost_Manor.png",
     };
 
@@ -206,7 +206,7 @@ export class Books {
         bookType: bookType.Story,
         title_en: "Kingdom of Beasts",
         title_ru: "Королевство зверей",
-        scenetag: sceneTagEnum.None,
+        scenetag: sceneTagEnum.WondrousJourney,
         filename: "Book_Kingdom_of_Beasts.png",
     };
 
@@ -215,7 +215,7 @@ export class Books {
         bookType: bookType.Story,
         title_en: "House of Horrors",
         title_ru: "Дом ужасов",
-        scenetag: sceneTagEnum.None,
+        scenetag: sceneTagEnum.AstoundingEpisode,
         filename: "Book_House_of_Horrors.png",
     };
 
@@ -224,7 +224,7 @@ export class Books {
         bookType: bookType.Story,
         title_en: "Spring Sonata",
         title_ru: "Весенняя соната",
-        scenetag: sceneTagEnum.None,
+        scenetag: sceneTagEnum.StyledAllOver,
         filename: "Book_Spring_Sonata.png",
     };
 
@@ -242,7 +242,7 @@ export class Books {
         bookType: bookType.Story,
         title_en: "Gourmet's Journey",
         title_ru: "Путешествие гурмана",
-        scenetag: sceneTagEnum.None,
+        scenetag: sceneTagEnum.OrientalFantasy,
         filename: "Book_Gourmets_Journey.png",
     };
 
@@ -251,7 +251,7 @@ export class Books {
         bookType: bookType.Story,
         title_en: "Miss Kitty's Antiques",
         title_ru: "Антиквариат мисс Китти",
-        scenetag: sceneTagEnum.None,
+        scenetag: sceneTagEnum.RomanticPoem,
         filename: "Book_Miss_Kittys_Antiques.png",
     };
 
@@ -260,7 +260,7 @@ export class Books {
         bookType: bookType.Story,
         title_en: "Hela's Compass",
         title_ru: "Компас Хелы",
-        scenetag: sceneTagEnum.None,
+        scenetag: sceneTagEnum.PhantomLight,
         filename: "Book_Helas_Compass.png",
     };
 
@@ -278,7 +278,7 @@ export class Books {
         bookType: bookType.Story,
         title_en: "The Perfect Storm",
         title_ru: "Идеальный шторм",
-        scenetag: sceneTagEnum.None,
+        scenetag: sceneTagEnum.AstoundingEpisode,
         filename: "Book_The_Perfect_Storm.png",
     };
 
@@ -287,7 +287,7 @@ export class Books {
         bookType: bookType.Story,
         title_en: "Code: Whalefall",
         title_ru: "Код: Падение кита",
-        scenetag: sceneTagEnum.None,
+        scenetag: sceneTagEnum.PhantomLight,
         filename: "Book_Code_Whalefall.png",
     };
 
@@ -296,7 +296,7 @@ export class Books {
         bookType: bookType.Story,
         title_en: "Moving Mountains",
         title_ru: "Движущиеся горы",
-        scenetag: sceneTagEnum.None,
+        scenetag: sceneTagEnum.OrientalFantasy,
         filename: "Book_Moving_Mountains.png",
     };
 
@@ -305,7 +305,7 @@ export class Books {
         bookType: bookType.Story,
         title_en: "Sisters of the Sea",
         title_ru: "Сёстры моря",
-        scenetag: sceneTagEnum.None,
+        scenetag: sceneTagEnum.MagicalAdventure,
         filename: "Book_Sisters_of_the_Sea.png",
     };
 
@@ -314,7 +314,7 @@ export class Books {
         bookType: bookType.Story,
         title_en: "The Apothecary",
         title_ru: "Аптекарь",
-        scenetag: sceneTagEnum.None,
+        scenetag: sceneTagEnum.WondrousJourney,
         filename: "Book_The_Apothecary.png",
     };
 
@@ -323,7 +323,7 @@ export class Books {
         bookType: bookType.Story,
         title_en: "Lunar Legend",
         title_ru: "Лунная легенда",
-        scenetag: sceneTagEnum.None,
+        scenetag: sceneTagEnum.WondrousJourney,
         filename: "Book_Lunar_Legend.png",
     };
 
@@ -341,7 +341,7 @@ export class Books {
         bookType: bookType.Story,
         title_en: "Dominic's Disappearance",
         title_ru: "Исчезновение Доминика",
-        scenetag: sceneTagEnum.None,
+        scenetag: sceneTagEnum.AstoundingEpisode,
         filename: "Book_Dominics_Disappearance.png",
     };
 
@@ -359,7 +359,7 @@ export class Books {
         bookType: bookType.Story,
         title_en: "Mysteries of Zentico",
         title_ru: "Тайны Зентико",
-        scenetag: sceneTagEnum.None,
+        scenetag: sceneTagEnum.AstoundingEpisode,
         filename: "Book_Mysteries_of_Zentico.png",
     };
 
@@ -368,7 +368,7 @@ export class Books {
         bookType: bookType.Story,
         title_en: "Showdown in Glitter Rise",
         title_ru: "Схватка в Блестящем Восхождении",
-        scenetag: sceneTagEnum.None,
+        scenetag: sceneTagEnum.StarryLegend,
         filename: "Book_Showdown_in_Glitter_Rise.png",
     };
 
@@ -377,7 +377,7 @@ export class Books {
         bookType: bookType.Story,
         title_en: "Magpie Tower",
         title_ru: "Башня сороки",
-        scenetag: sceneTagEnum.None,
+        scenetag: sceneTagEnum.StyledAllOver,
         filename: "Book_Magpie_Tower.png",
     };
 
@@ -386,7 +386,7 @@ export class Books {
         bookType: bookType.Story,
         title_en: "Infinite Shimmer",
         title_ru: "Бесконечное мерцание",
-        scenetag: sceneTagEnum.None,
+        scenetag: sceneTagEnum.PhantomLight,
         filename: "Book_Infinite_Shimmer.png",
     };
 
@@ -395,7 +395,7 @@ export class Books {
         bookType: bookType.Story,
         title_en: "The Underground City: Stirring Shadows",
         title_ru: "Подземный город: Пробуждающиеся тени",
-        scenetag: sceneTagEnum.None,
+        scenetag: sceneTagEnum.WondrousJourney,
         filename: "Book_The_Underground_City_Stirring_Shadows.png",
     };
 
@@ -404,7 +404,7 @@ export class Books {
         bookType: bookType.Story,
         title_en: "Twilight's Crown",
         title_ru: "Корона сумерек",
-        scenetag: sceneTagEnum.None,
+        scenetag: sceneTagEnum.WondrousJourney,
         filename: "Book_Twilights_Crown.png",
     };
 
@@ -413,7 +413,7 @@ export class Books {
         bookType: bookType.TravelersNote,
         title_en: "On the Run",
         title_ru: "В бегах",
-        scenetag: sceneTagEnum.None,
+        scenetag: sceneTagEnum.StyledAllOver,
         filename: "Book_On_the_Run.png",
     };
 
@@ -422,7 +422,7 @@ export class Books {
         bookType: bookType.TravelersNote,
         title_en: "Alice: Ideal Wonderland",
         title_ru: "Алиса: Идеальная страна чудес",
-        scenetag: sceneTagEnum.None,
+        scenetag: sceneTagEnum.WondrousJourney,
         filename: "Book_Alice_Ideal_Wonderland.png",
     };
 
@@ -549,7 +549,7 @@ export class Books {
             bookType: bookType.SideStory,
             title_en: "The Western Wall",
             title_ru: "Западная стена",
-            scenetag: sceneTagEnum.None,
+            scenetag: sceneTagEnum.ForeignScenery,
             filename: "Side_Book_The_Western_Wall.png",
             parentbook: this.MagicLamp
         },
@@ -558,7 +558,7 @@ export class Books {
             bookType: bookType.SideStory,
             title_en: "Mysterious Island",
             title_ru: "Таинственный остров",
-            scenetag: sceneTagEnum.None,
+            scenetag: sceneTagEnum.ForeignScenery,
             filename: "Side_Book_Mysterious_Island.png",
             parentbook: this.MagicLamp
         },
@@ -567,7 +567,7 @@ export class Books {
             bookType: bookType.SideStory,
             title_en: "The Poet",
             title_ru: "Поэт",
-            scenetag: sceneTagEnum.None,
+            scenetag: sceneTagEnum.ForeignScenery,
             filename: "Side_Book_The_Poet.png",
             parentbook: this.MagicLamp
         },
@@ -594,7 +594,7 @@ export class Books {
             bookType: bookType.SideStory,
             title_en: "Jade Pillow",
             title_ru: "Нефритовая подушка",
-            scenetag: sceneTagEnum.None,
+            scenetag: sceneTagEnum.OrientalFantasy,
             filename: "Side_Book_Jade_Pillow.png",
             parentbook: this.TangDynastyHunter
         },
@@ -603,7 +603,7 @@ export class Books {
             bookType: bookType.SideStory,
             title_en: "Wishful Wonderland",
             title_ru: "Желаемая страна чудес",
-            scenetag: sceneTagEnum.None,
+            scenetag: sceneTagEnum.StyledAllOver,
             filename: "Side_Book_Wishful_Wonderland.png",
             parentbook: this.SiwooSight
         },
@@ -612,7 +612,7 @@ export class Books {
             bookType: bookType.SideStory,
             title_en: "General Meow",
             title_ru: "Генерал Мяу",
-            scenetag: sceneTagEnum.None,
+            scenetag: sceneTagEnum.OrientalFantasy,
             filename: "Side_Book_General_Meow.png",
             parentbook: this.GourmetsJourney
         },
@@ -621,7 +621,7 @@ export class Books {
             bookType: bookType.SideStory,
             title_en: "Illusions On Ice",
             title_ru: "Иллюзии на льду",
-            scenetag: sceneTagEnum.None,
+            scenetag: sceneTagEnum.StyledAllOver,
             filename: "Side_Book_Illusions_On_Ice.png",
             parentbook: this.DancingOnIce
         },
@@ -630,7 +630,7 @@ export class Books {
             bookType: bookType.SideStory,
             title_en: "Empire of Flames",
             title_ru: "Империя огня",
-            scenetag: sceneTagEnum.None,
+            scenetag: sceneTagEnum.ForeignScenery,
             filename: "Side_Book_Empire_of_Flames.png",
             parentbook: this.TheSacredBeast
         },
@@ -639,7 +639,7 @@ export class Books {
             bookType: bookType.SideStory,
             title_en: "The Bottle of Blessings",
             title_ru: "Бутылка благословений",
-            scenetag: sceneTagEnum.None,
+            scenetag: sceneTagEnum.MagicalAdventure,
             filename: "Side_Book_The_Bottle_of_Blessings.png",
             parentbook: this.SagaOfViera
         },
@@ -648,7 +648,7 @@ export class Books {
             bookType: bookType.SideStory,
             title_en: "The Heir's Secret",
             title_ru: "Тайна наследника",
-            scenetag: sceneTagEnum.None,
+            scenetag: sceneTagEnum.WondrousJourney,
             filename: "Side_Book_The_Heirs_Secret.png",
             parentbook: this.KingdomOfBeasts
         },
@@ -657,7 +657,7 @@ export class Books {
             bookType: bookType.SideStory,
             title_en: "The Fourth Story",
             title_ru: "Четвёртая история",
-            scenetag: sceneTagEnum.None,
+            scenetag: sceneTagEnum.WondrousJourney,
             filename: "Side_Book_The_Fourth_Story.png",
             parentbook: this.TheApothecary
         },
@@ -666,7 +666,7 @@ export class Books {
             bookType: bookType.SideStory,
             title_en: "Hearts of Gold",
             title_ru: "Золотые сердца",
-            scenetag: sceneTagEnum.None,
+            scenetag: sceneTagEnum.OrientalFantasy,
             filename: "Side_Book_Hearts_of_Gold.png",
             parentbook: this.MovingMountains
         },
@@ -675,7 +675,7 @@ export class Books {
             bookType: bookType.SideStory,
             title_en: "Where the Magic Leads",
             title_ru: "Туда, куда ведёт магия",
-            scenetag: sceneTagEnum.None,
+            scenetag: sceneTagEnum.WondrousJourney,
             filename: "Side_Book_Where_the_Magic_Leads.png",
             parentbook: this.LunarLegend
         }
