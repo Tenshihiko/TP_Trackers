@@ -28,6 +28,12 @@ export class DataService{
         return of(Books.TravellersNotes.filter(story => scene === (sceneTagEnum.None as sceneTagEnum) || story.scenetag === scene));
     }
 
+    getSideStories(scene: sceneTagEnum | null): Observable<SideStory[]>{
+        if(!scene)
+            return of(Books.SideStories);
+        return of(Books.SideStories.filter(story => scene === (sceneTagEnum.None as sceneTagEnum) || story.scenetag === scene));
+    }
+
     getRelics(stars: number | null, scene: sceneTagEnum | null, clothetags: clothesTagEnum[] | null): Observable<Relic[]>{
         return of(Relics.All.filter(relic =>
             (!stars || stars == 0 || relic.stars === stars)
