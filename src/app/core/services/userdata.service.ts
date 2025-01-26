@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BookCard } from '../../components/books/bookcard.model';
 import { LocalStorageService } from './local-storage.service';
-import { UserBook } from '../models/userdata.model';
+import { IObtained, UserBook } from '../models/userdata.model';
 
 @Injectable({
     providedIn: 'root',
@@ -12,15 +12,15 @@ export class UserdataService {
     ) { }
 
 
-    SetBookObtained(story: BookCard) {
-        let userBook = this.localStorage.getItem<UserBook>(story.id);
+    SetBookObtained(card: {id: string, obtained: boolean}) {
+        let userBook = this.localStorage.getItem<IObtained>(card.id);
         if(userBook){
-            userBook.obtained = story.obtained;            
+            userBook.obtained = card.obtained;            
         } else {
             userBook = {
-                obtained: story.obtained
+                obtained: card.obtained
             }
         }
-        this.localStorage.setItem(story.id, userBook);
+        this.localStorage.setItem(card.id, userBook);
     }
 }

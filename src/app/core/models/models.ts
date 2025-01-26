@@ -1,4 +1,4 @@
-import { bookType, clothesTagEnum, giftTagEnum, sceneTagEnum } from "./enums";
+import { bookType, catSpecialityEnum, catTypeEnum as catTypeEnum, clothesTagEnum, giftTagEnum, sceneTagEnum } from "./enums";
 
 interface IVisual{
   filename: string;
@@ -67,4 +67,17 @@ export class SceneTag implements IVisual{
   title_en: string = '';
   title_ru: string = '';
   filename: string = '';
+}
+
+export interface Cat {
+  id: string;
+  title_en: string;
+  title_ru: string;
+  stars: number;
+  speciality: catSpecialityEnum;
+  clothestags: clothesTagEnum[];
+  filename: string;
+  description: string;
+  obtained: string;
+  type: catTypeEnum;
 }

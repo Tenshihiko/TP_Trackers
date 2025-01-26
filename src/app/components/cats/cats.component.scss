@@ -1,0 +1,40 @@
+.books-panel {
+
+    .filter-panel {
+      margin-bottom: 20px;
+    }
+  
+    .cats-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 10px;
+      min-height: 150px;
+      margin-bottom: 30px;
+    }
+  
+    .cat-card{
+      display: flex;
+      flex-direction: column;
+      min-height: 150px;
+      cursor:pointer;
+  
+      img {
+        width: 100%;
+        height: auto;
+        // Применяем фильтр черно-белого изображения по умолчанию
+        filter: grayscale(80%) brightness(60%);      
+      }
+  
+      &.obtained img {
+        // Когда есть класс obtained, снимаем фильтр
+        filter: none;
+      }
+  
+      .info-panel {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px;
+      }
+    }
+  }

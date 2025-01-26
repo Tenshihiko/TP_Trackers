@@ -1,6 +1,6 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { SceneTag, SideStory, Story, TravelersNote } from '../../core/models/models';
+import { SceneTag} from '../../core/models/models';
 import { DataService } from '../../core/services/data.service';
 import { SceneTags } from '../../core/data/scenetags.data'
 import { sceneTagEnum } from '../../core/models/enums';
@@ -14,8 +14,7 @@ import { UserdataService } from '../../core/services/userdata.service';
   styleUrls: ['./books.component.scss'],
   imports: [
     CommonModule,
-    FormsModule,
-    
+    FormsModule,    
   ],
 })
 export class BooksComponent implements OnInit {
@@ -27,8 +26,7 @@ export class BooksComponent implements OnInit {
 
   constructor(
     private dataService: DataService,
-    private userdataService:UserdataService,
-    private cdRef: ChangeDetectorRef
+    private userdataService:UserdataService
   ) {
     this.sceneTags = SceneTags.All;
   }
@@ -56,11 +54,8 @@ export class BooksComponent implements OnInit {
     this.fetchData();
   }
 
-  toggleObtained(story: BookCard) {
-    
-    story.obtained = !story.obtained;
-    
-    this.cdRef.detectChanges(); 
+  toggleObtained(story: BookCard) {    
+    story.obtained = !story.obtained;    
     this.userdataService.SetBookObtained(story);
   }
   
