@@ -1,10 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { SceneTag, SideStory, Story, TravelersNote } from '../../core/models/models';
 import { DataService } from '../../core/services/data.service';
 import { SceneTags } from '../../core/data/scenetags.data'
 import { sceneTagEnum } from '../../core/models/enums';
 import { CommonModule } from '@angular/common';
+import { BookCard } from './bookcard.model';
+import { UserdataService } from '../../core/services/userdata.service';
 
 @Component({
   selector: 'tpt-books',
@@ -17,13 +19,17 @@ import { CommonModule } from '@angular/common';
   ],
 })
 export class BooksComponent implements OnInit {
-  stories: Story[] = [];
-  travelersNotes: TravelersNote[] = [];
-  sidestories: SideStory[] = [];
-  sceneFilter: sceneTagEnum | null = null;
+  stories: BookCard[] = [];
+  travelersNotes: BookCard[] = [];
+  sidestories: BookCard[] = [];
+  sceneFilter: sceneTagEnum = sceneTagEnum.None;
   sceneTags: SceneTag[] = [];
 
-  constructor(private dataService: DataService) {
+  constructor(
+    private dataService: DataService,
+    private userdataService:UserdataService,
+    private cdRef: ChangeDetectorRef
+  ) {
     this.sceneTags = SceneTags.All;
   }
 
@@ -45,8 +51,17 @@ export class BooksComponent implements OnInit {
     });
   }
 
-  onFilterChange(newSceneFilter: sceneTagEnum | null): void {
+  onFilterChange(newSceneFilter: sceneTagEnum): void {
     this.sceneFilter = newSceneFilter;
     this.fetchData();
   }
+
+  toggleObtained(story: BookCard) {
+    
+    story.obtained = !story.obtained;
+    
+    this.cdRef.detectChanges(); 
+    this.userdataService.SetBookObtained(story);
+  }
+  
 }

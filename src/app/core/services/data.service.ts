@@ -2,36 +2,53 @@ import { Injectable } from "@angular/core";
 import { Books } from "../data/books.data";
 import { Companions } from "../data/companions.data";
 import { Relics } from "../data/relics.data";
-import { Companion, Relic, SideStory, Story, TravelersNote } from "../models/models";
+import { Book, Companion, Relic, SideStory, Story, TravelersNote } from "../models/models";
 import { Observable, of } from "rxjs";
 import { clothesTagEnum, giftTagEnum, sceneTagEnum } from "../models/enums";
+import { BookCard } from "../../components/books/bookcard.model";
+import { MappingService } from "./mapping.service";
+import { UserdataService } from "./userdata.service";
+import { UserBook } from "../models/userdata.model";
+import { LocalStorageService } from "./local-storage.service";
 
 @Injectable({
     providedIn: 'root',
   })
 export class DataService{
+    
+    constructor(
+        private mapper:MappingService,
+        private localStorage: LocalStorageService,
+    ){
 
-    getStories(scene: sceneTagEnum | null): Observable<Story[]> {
-        if(!scene)
-            return of(Books.Stories);
+    }
 
-        return of(Books.Stories.filter(story => scene === (sceneTagEnum.None as sceneTagEnum) || story.scenetag === scene));
+    getStories(scene: sceneTagEnum): Observable<BookCard[]> {
+        return this.getBookCards(scene, Books.Stories);
     }
 
     getSideStoriesByStory(storyId: string): Observable<SideStory[]>{
         return of(Books.SideStories.filter(sidestory => sidestory.parentbook.id === storyId));
     }
 
-    getTravelersNotes(scene: sceneTagEnum | null): Observable<TravelersNote[]>{
-        if(!scene)
-            return of(Books.TravellersNotes);
-        return of(Books.TravellersNotes.filter(story => scene === (sceneTagEnum.None as sceneTagEnum) || story.scenetag === scene));
+    getTravelersNotes(scene: sceneTagEnum ): Observable<BookCard[]>{
+        return this.getBookCards(scene, Books.TravellersNotes);
     }
 
-    getSideStories(scene: sceneTagEnum | null): Observable<SideStory[]>{
-        if(!scene)
-            return of(Books.SideStories);
-        return of(Books.SideStories.filter(story => scene === (sceneTagEnum.None as sceneTagEnum) || story.scenetag === scene));
+    getSideStories(scene: sceneTagEnum): Observable<BookCard[]>{
+        return this.getBookCards(scene, Books.SideStories);
+    }
+
+    getBookCards(scene: sceneTagEnum, bookset: Book[]): Observable<BookCard[]>{
+        let filteredBooks = bookset.filter(story => 
+            scene === (sceneTagEnum.None as sceneTagEnum) || story.scenetag === scene);
+        let storyCards = this.mapper.mapArray<Book,BookCard>(filteredBooks, BookCard);
+
+        storyCards.forEach(story =>
+            story.obtained = this.localStorage.getItem<UserBook>(story.id)?.obtained ?? false
+        );
+
+        return of(storyCards);
     }
 
     getRelics(stars: number | null, scene: sceneTagEnum | null, clothetags: clothesTagEnum[] | null): Observable<Relic[]>{

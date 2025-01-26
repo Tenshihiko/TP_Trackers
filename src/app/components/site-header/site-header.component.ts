@@ -13,7 +13,9 @@ import { saveAs } from 'file-saver';
 export class SiteHeaderComponent {
   menuOpen = false;
 
-  constructor(private localStorageService: LocalStorageService) {}
+  constructor(
+    private localStorageService: LocalStorageService
+  ) {}
 
   ngOnInit(){
     if(!this.localStorageService.hasKey('tpt-testdata')){
@@ -31,7 +33,6 @@ export class SiteHeaderComponent {
       },
       error: (err) => console.error('Ошибка при экспорте данных', err),
     });
-    this.toggleMenu();
   }
 
   // Метод для импорта данных
@@ -57,14 +58,21 @@ export class SiteHeaderComponent {
         reader.readAsText(file);
       }
     };
-    this.toggleMenu();
+    this.refreshPage();
+    this.toggleMenu();    
   }
 
   // Метод для очистки данных
   clearData() {
     console.log('Стереть данные');
     this.localStorageService.clear();
+    
+    this.refreshPage();
     this.toggleMenu();
+  }
+
+  refreshPage(){
+    //TODO implement!
   }
 
   toggleMenu() {
