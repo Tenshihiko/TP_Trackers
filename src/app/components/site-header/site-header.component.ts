@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { ChangeDetectorRef, Component } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
 import { LocalStorageService } from '../../core/services/local-storage.service';
 import { saveAs } from 'file-saver';
 
@@ -8,18 +8,20 @@ import { saveAs } from 'file-saver';
   selector: 'tpt-site-header',
   templateUrl: './site-header.component.html',
   styleUrl: './site-header.component.scss',
-  imports:[CommonModule, RouterModule]
+  imports: [CommonModule, RouterModule]
 })
 export class SiteHeaderComponent {
   menuOpen = false;
 
   constructor(
-    private localStorageService: LocalStorageService
-  ) {}
+    private localStorageService: LocalStorageService,
+    private router: Router,
+    private cdr: ChangeDetectorRef
+  ) { }
 
-  ngOnInit(){
-    if(!this.localStorageService.hasKey('tpt-testdata')){
-      this.localStorageService.setItem('tpt-testdata', {test:"test"});
+  ngOnInit() {
+    if (!this.localStorageService.hasKey('tpt-testdata')) {
+      this.localStorageService.setItem('tpt-testdata', { test: "test" });
     }
   }
 
@@ -51,28 +53,38 @@ export class SiteHeaderComponent {
         reader.onload = () => {
           const json = reader.result as string;
           this.localStorageService.importAll(json).subscribe({
-            next: () => console.log('Данные успешно импортированы'),
-            error: (err) => console.error('Ошибка при импорте данных', err),
+            next: () => {
+              console.log('Данные успешно импортированы');
+              this.refreshPage();
+            },
+            error: (err) => {
+              console.error('Ошибка при импорте данных', err);
+              this.refreshPage();
+            },
           });
         };
         reader.readAsText(file);
       }
     };
     this.refreshPage();
-    this.toggleMenu();    
+    this.toggleMenu();
   }
 
   // Метод для очистки данных
   clearData() {
     console.log('Стереть данные');
     this.localStorageService.clear();
-    
+
     this.refreshPage();
     this.toggleMenu();
   }
 
-  refreshPage(){
-    //TODO implement!
+  refreshPage() {
+    // Обновляем компонент, используя router.navigate
+    const currentUrl = this.router.url; // текущий URL
+    this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
+      this.router.navigate([currentUrl]);
+    });
   }
 
   toggleMenu() {
