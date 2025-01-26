@@ -15,9 +15,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './cats.component.scss',
 })
 export class CatsComponent {
-  regularCats: CatCard[] = [];
-  shortCats: CatCard[] = [];
-  thinCats: CatCard[] = [];
+  cats: CatCard[] = [];
 
   constructor(    
         private dataService: DataService,
@@ -32,16 +30,8 @@ export class CatsComponent {
   }
 
   fetchData(): void {
-    this.dataService.getCatCards(catTypeEnum.Regular).subscribe((cats) =>{
-      this.regularCats = cats;
-    });
-
-    this.dataService.getCatCards(catTypeEnum.Short).subscribe((cats) =>{
-      this.shortCats = cats;
-    });
-
-    this.dataService.getCatCards(catTypeEnum.Thin).subscribe((cats) =>{
-      this.thinCats = cats;
+    this.dataService.getCatCards(catTypeEnum.None).subscribe((cats) =>{
+      this.cats = cats;
     });
   }
 

@@ -4,5 +4,5 @@ export class CatCard{
     title_ru: string = '';
     filename: string = '';
     obtained: boolean = false;
-
+    stars: number = 0
 }

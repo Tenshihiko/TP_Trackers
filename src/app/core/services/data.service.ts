@@ -73,7 +73,7 @@ export class DataService{
     }
 
     getCatCards(type: catTypeEnum): Observable<CatCard[]>{
-        let cats = Object.values(Cats).filter(cat => cat.type === type);
+        let cats = Cats.All_TableSorted.filter(cat => type === catTypeEnum.None as catTypeEnum ||  cat.type === type);
         let catcards = this.mapper.mapArray<Cat, CatCard>(cats, CatCard);
 
         catcards.forEach(cat =>

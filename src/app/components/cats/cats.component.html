@@ -1,25 +1,9 @@
 <div class="books-panel">
-    <h2>Regular</h2>
     <div class="cats-grid">
-        <div class="cat-card" [class.obtained]="cat.obtained" *ngFor="let cat of regularCats"
+        <div class="cat-card" [class.obtained]="cat.obtained" *ngFor="let cat of cats"
             (click)="toggleObtained(cat)">
             <img src="assets/cats/{{cat.filename}}" alt="Image of {{cat.title_en}}">
-        </div>
-    </div>
-
-    <h2>Short</h2>
-    <div class="cats-grid">
-        <div class="cat-card" [class.obtained]="cat.obtained" *ngFor="let cat of shortCats"
-            (click)="toggleObtained(cat)">
-            <img src="assets/cats/{{cat.filename}}" alt="Image of {{cat.title_en}}">
-        </div>
-    </div>
-
-    <h2>Thin</h2>
-    <div class="cats-grid">
-        <div class="cat-card" [class.obtained]="cat.obtained" *ngFor="let cat of thinCats"
-            (click)="toggleObtained(cat)">
-            <img src="assets/cats/{{cat.filename}}" alt="Image of {{cat.title_en}}">
+            <img class="stars" src="assets/stars/S{{cat.stars}}.png" alt="{{cat.stars}} stars!">
         </div>
     </div>
 </div>
