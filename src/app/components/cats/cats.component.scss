@@ -15,15 +15,16 @@
     .cat-card{
       display: flex;
       flex-direction: column;
-      min-height: 150px;      
       cursor:pointer;
       margin-bottom: 30px;
   
       img {
         width: 100%;
         height: auto;
+        object-fit: contain;
+        max-height: 150px;
         // Применяем фильтр черно-белого изображения по умолчанию
-        filter: grayscale(80%) brightness(60%);   
+        filter: grayscale(80%) brightness(30%);   
         
         &.stars{
             max-height:20px;
