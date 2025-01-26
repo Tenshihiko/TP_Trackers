@@ -7,7 +7,7 @@
     .cats-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 90px;
+      gap: 10px;
       min-height: 150px;
       margin-bottom: 30px;
     }
@@ -15,8 +15,9 @@
     .cat-card{
       display: flex;
       flex-direction: column;
-      min-height: 150px;
+      min-height: 150px;      
       cursor:pointer;
+      margin-bottom: 30px;
   
       img {
         width: 100%;
